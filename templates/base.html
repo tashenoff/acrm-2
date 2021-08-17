@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "css/style.min.css" %}'>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'css/starts.css' %}" />
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/main.js' %}" defer></script>
+
+    <title>Document</title>
+
+    
+    <script>
+        var myNav = document.getElementById("nav");
+
+        window.onscroll = function () {
+            "use strict";
+            if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
+                myNav.classList.add("scroll");
+            } else {
+                myNav.classList.remove("scroll");
+            }
+        };
+    </script>
+
+
+
+</head>
+
+<body x-data="{ 'isDialogOpen': false, 'darkMode': false }" @keydown.escape="isDialogOpen = false" x-init="
+darkMode = JSON.parse(localStorage.getItem('darkMode'));
+$watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
+
+    {% block content %}
+
+
+
+    {% endblock content %}
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</html>
