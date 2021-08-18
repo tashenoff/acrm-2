@@ -3,6 +3,7 @@ from django.db import models
 from django.dispatch import receiver
 from django.contrib.auth import get_user_model
 from customer.models import Customer
+from service.models import MainService
 # Create your models here.
 
 # FirstName
@@ -28,7 +29,7 @@ class Main(models.Model):
     comment = models.TextField(verbose_name="Дополнительный комментарий", max_length=255, blank=True, null=True)
     rec_created = models.DateTimeField(auto_now_add=True, verbose_name="Дата заявки")
     meeting_date = models.DateField(blank=True, null=True, verbose_name="Дата встречи")
-    main_service = models.ForeignKey('MainService', on_delete=models.CASCADE, related_name="main_service", verbose_name="Услуга")
+    main_service = models.ForeignKey('service.MainService', null=True, default=None, on_delete=models.CASCADE, related_name="main_service", verbose_name="Услуга")
 
     def __str__(self):
         return self.comment
@@ -39,16 +40,3 @@ class Main(models.Model):
 
 
         
-class MainService(models.Model):
-    main_service_name = models.CharField(max_length=100, verbose_name="Название услуги")
-    main_service_price = models.CharField(max_length=100, verbose_name="Цена")
-    main_service_comment = models.TextField(verbose_name="Описание услуги", max_length=255, blank=True, null=True)
-    main_service_slug = models.SlugField(unique=True)
-    
-    def __str__(self):
-        return "%s" % self.main_service_name
-    class Meta:
-        verbose_name = "Услуги"
-        verbose_name_plural = "Услуга"   
-
-

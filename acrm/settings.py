@@ -47,6 +47,7 @@ LOCAL_APPS = [
     'userprofile',
     'customer',
     'customization',
+    'service',
 ]
 
 REST_FRAMEWORK = {
