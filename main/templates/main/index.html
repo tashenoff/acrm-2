@@ -3,203 +3,201 @@
 <div :class="{'dark': darkMode === true}">
 
     <div
-    class="flex fixed text-black w-full justify-center lg:px-0 z-60  mx-auto delay-100 transition-colors duration-300 ease-in-out ">
+        class="flex fixed text-black w-full justify-center lg:px-0 z-60  mx-auto delay-100 transition-colors duration-300 ease-in-out ">
 
 
 
-    <div class="px-10 flex w-full items-center bg-white dark:bg-primary text-black shadow-md">
+        <div class="px-10 flex w-full items-center bg-white dark:bg-primary text-black shadow-md">
 
-        <!-- <div class="px-10 flex w-full items-center"
+            <!-- <div class="px-10 flex w-full items-center"
     x-data="{ atTop: true }" :class="{ 'bg-primary ' : !atTop }"
    @scroll.window="atTop = (window.pageYOffset > 40) ? false : true"> -->
 
-        <div id="nav" class="navbar w-full flex justify-center dark:text-white">
+            <div id="nav" class="navbar w-full flex justify-center dark:text-white">
 
 
 
 
-            <nav class="flex items-center lg:px-0 px-5 justify-between relative z-40 flex-wrap py-6 fixed w-full top-0"
-                x-data="{ isOpen: false }" @keydown.escape="isOpen = false"
-                :class="{ 'shadow-lg bg-transparent' : isOpen }">
+                <nav class="flex items-center lg:px-0 px-5 justify-between relative z-40 flex-wrap py-6 fixed w-full top-0"
+                    x-data="{ isOpen: false }" @keydown.escape="isOpen = false"
+                    :class="{ 'shadow-lg bg-transparent' : isOpen }">
 
-                <!--Logo etc-->
-                <div class="flex items-center flex-shrink-0 text-white mr-6">
-                    <div class="" href="#">
-                        <img class="logo w-28 h-10 " src="./assets/img/logo.svg" alt="">
+                    <!--Logo etc-->
+                    <div class="flex items-center flex-shrink-0 text-white mr-6">
+                        <div class="" href="#">
+                            <img class="logo w-28 h-10 " src="./assets/img/logo.svg" alt="">
+                        </div>
                     </div>
-                </div>
 
-                <div class="lg:hidden block font-bold ">
-
-
-                    <div>8775 533 1450</div>
-
-                </div>
-
-                <!--Toggle button (hidden on large screens)-->
-                <button @click="isOpen = !isOpen" type="button"
-                    class="block lg:hidden p-2 text-white hover:text-white focus:outline-none focus:text-white"
-                    :class="{ 'transition transform-180': isOpen }">
-                    <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24">
-                        <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
-                        <path x-show="!isOpen" fill-rule="evenodd"
-                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-                    </svg>
-                </button>
+                    <div class="lg:hidden block font-bold ">
 
 
-                <!--Menu-->
-                <div class="w-full lg:px-0 px-5 flex-grow lg:flex lg:items-center lg:w-auto lg:relative absolute lg:top-0 top-20 left-0 z-50"
-                    :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen, 'bg-primary' : isOpen }"
-                    @click.away="isOpen = false" x-show.transition="true">
-                    <ul class="pt-6 lg:pt-0 list-reset lg:flex items-center uppercase text-sm font-bold">
-                        <li class="mr-3">
-                            <a class="cursor-pointer inline-block py-2 px-2  no-underline"
-                                @click="$scroll('#home'), isOpen = false">
-                                Главная</a>
-                            </a>
-                        </li>
-                        <li class="mr-3">
-                            <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                                @click="$scroll('#about'), isOpen = false">
-                                О нас
-                            </a>
-                        </li>
+                        <div>8775 533 1450</div>
 
-                        <li class="mr-3">
-                            <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                                @click="$scroll('#product'), isOpen = false">Продукты
-                            </a>
-                        </li>
+                    </div>
+
+                    <!--Toggle button (hidden on large screens)-->
+                    <button @click="isOpen = !isOpen" type="button"
+                        class="block lg:hidden p-2 text-white hover:text-white focus:outline-none focus:text-white"
+                        :class="{ 'transition transform-180': isOpen }">
+                        <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                            <path x-show="!isOpen" fill-rule="evenodd"
+                                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                        </svg>
+                    </button>
 
 
-                        <!-- <li class="mr-3">
+                    <!--Menu-->
+                    <div class="w-full lg:px-0 px-5 flex-grow lg:flex lg:items-center lg:w-auto lg:relative absolute lg:top-0 top-20 left-0 z-50"
+                        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen, 'bg-primary' : isOpen }"
+                        @click.away="isOpen = false" x-show.transition="true">
+                        <ul class="pt-6 lg:pt-0 list-reset lg:flex items-center uppercase text-sm font-bold">
+                            <li class="mr-3">
+                                <a class="cursor-pointer inline-block py-2 px-2  no-underline"
+                                    @click="$scroll('#home'), isOpen = false">
+                                    Главная</a>
+                                </a>
+                            </li>
+                            <li class="mr-3">
+                                <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                    @click="$scroll('#about'), isOpen = false">
+                                    О нас
+                                </a>
+                            </li>
+
+                            <li class="mr-3">
+                                <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                    @click="$scroll('#product'), isOpen = false">Продукты
+                                </a>
+                            </li>
+
+
+                            <!-- <li class="mr-3">
                         <a class="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                             href="#" @click="$scroll('#second'), isOpen = false">отзывы
                         </a>
                     </li> -->
 
 
-                        <li class="mr-3 lg:mb-0 mb-5">
-                            <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
-                                @click="$scroll('#contact'), isOpen = false">Контакты
-                            </a>
-                        </li>
+                            <li class="mr-3 lg:mb-0 mb-5">
+                                <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                    @click="$scroll('#contact'), isOpen = false">Контакты
+                                </a>
+                            </li>
 
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
 
-        </div>
-        </nav>
+            </div>
+            </nav>
 
 
 
-        <div class="navbar__right justify-end w-full items-center relative z-50 lg:flex hidden ">
-            <div class="pr-5 font-bold flex">
-                <div class="flex items-center mr-5">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="navbar__right justify-end w-full items-center relative z-50 lg:flex hidden ">
+                <div class="pr-5 font-bold flex">
+                    <div class="flex items-center mr-5">
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg> -->
 
-                    <!-- <div>+7 (747) 167-91-01</div> -->
+                        <!-- <div>+7 (747) 167-91-01</div> -->
+                    </div>
+                    <div class="flex items-center dark:text-white">
+
+
+                        <div>8775 533 14510</div>
+
+                    </div>
                 </div>
-                <div class="flex items-center dark:text-white">
+                <button @click="isDialogOpen = true"
+                    class=" focus:outline-none rounded-full uppercase text-sm tracking-wide text-red dark:text-green font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
 
 
-                    <div>8775 533 14510</div>
-
-                </div>
-            </div>
-            <button @click="isDialogOpen = true"
-                class=" focus:outline-none rounded-full uppercase text-sm tracking-wide text-red dark:text-green font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-
-
-                Заказать звонок
+                    Заказать звонок
 
 
 
-            </button>
-
-            <div class="hidden sm:inline-flex">
-                <button @click="darkMode = !darkMode" :aria-checked="darkMode"
-                    :class="{'bg-green': darkMode, 'bg-gray': !darkMode }" type="button"
-                    class="mx-4 self-center relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-opacity-20 rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:outline-none hover:shadow bg-green"
-                    role="switch">
-                    <span class="sr-only">Enable light mode</span>
-                    <span :class="{'translate-x-0': darkMode, 'translate-x-5': !darkMode }"
-                        class="pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-5">
-                        <span
-                            :class="{'opacity-100 ease-in duration-200': darkMode, 'opacity-0 ease-out duration-100': !darkMode }"
-                            class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity opacity-0 ease-out duration-100"
-                            aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-yellow-300"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
-                                </path>
-                            </svg>
-                        </span>
-                        <span
-                            :class="{'opacity-0 ease-out duration-100': darkMode, 'opacity-100 ease-in duration-200': !darkMode }"
-                            class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity opacity-100 ease-in duration-200"
-                            aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-orange-600"
-                                viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                    </span>
                 </button>
+
+                <div class="hidden sm:inline-flex">
+                    <button @click="darkMode = !darkMode" :aria-checked="darkMode"
+                        :class="{'bg-green': darkMode, 'bg-gray': !darkMode }" type="button"
+                        class="mx-4 self-center relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-opacity-20 rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:outline-none hover:shadow bg-green"
+                        role="switch">
+                        <span class="sr-only">Enable light mode</span>
+                        <span :class="{'translate-x-0': darkMode, 'translate-x-5': !darkMode }"
+                            class="pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-5">
+                            <span
+                                :class="{'opacity-100 ease-in duration-200': darkMode, 'opacity-0 ease-out duration-100': !darkMode }"
+                                class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity opacity-0 ease-out duration-100"
+                                aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-yellow-300"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span
+                                :class="{'opacity-0 ease-out duration-100': darkMode, 'opacity-100 ease-in duration-200': !darkMode }"
+                                class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity opacity-100 ease-in duration-200"
+                                aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-orange-600"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+
+                </div>
 
             </div>
 
         </div>
 
+
     </div>
-
-
-</div>
 
 
     <section id="home" class="text-white dark:bg-primary dark:text-white home relative overflow-hidden ">
 
 
-    
-            <div
-                class="relative overflow-hidden flex flex-col items-center justify-center z-40 h-full">
-                <div class="background absolute w-full top-0 left-0 z-50">
-                    <div class="star1 star"></div>
-                    <div class="star2 star"></div>
-                    <div class="star3 star"></div>
-                    <div class="star4 star"></div>
-                </div>
 
-
-                <div class="w-100 h-full flex justify-center items-center relative z-60">
-
-                    <div class="text-center flex flex-col items-center relative z-50">
-                        <h1 class="home__title lg:text-8xl text-3x1 mb-5">Создание сайтов</h1>
-                        <h2 class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio impedit
-                            dicta, </h2>
-                        <button @click="isDialogOpen = true"
-                            class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
-                            Получить адекватную рассценку</button>
-    
-                    </div>
-    
-                </div>
-              
+        <div class="relative overflow-hidden flex flex-col items-center justify-center z-40 h-full">
+            <div class="background absolute w-full top-0 left-0 z-50">
+                <div class="star1 star"></div>
+                <div class="star2 star"></div>
+                <div class="star3 star"></div>
+                <div class="star4 star"></div>
             </div>
-      
+
+
+            <div class="w-100 h-full flex justify-center items-center relative z-60">
+
+                <div class="text-center flex flex-col items-center relative z-50">
+                    <h1 class="home__title lg:text-8xl text-3x1 mb-5">Создание сайтов</h1>
+                    <h2 class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio impedit
+                        dicta, </h2>
+                    <button @click="isDialogOpen = true"
+                        class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
+                        Получить адекватную рассценку</button>
+
+                </div>
+
+            </div>
+
+        </div>
 
 
 
-    
 
-   
+
+
+
 
 
 
@@ -332,8 +330,7 @@
                         <div class="absolute inset-y-0 left-0 z-10 flex items-center">
                             <button @click="swiper.slidePrev()"
                                 class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                                <svg viewBox="0 0 20 20" fill="currentColor"
-                                    class="chevron-left w-6 h-6 text-primary">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6 text-primary">
                                     <path fill-rule="evenodd"
                                         d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
                                         clip-rule="evenodd"></path>
@@ -350,8 +347,7 @@
                                         <div class="flex-shrink-0">
                                             <div
                                                 class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
-                                                <div
-                                                    class="z-60 relative  flex flex-col items-center content-between">
+                                                <div class="z-60 relative  flex flex-col items-center content-between">
                                                     <div class="flex flex-col items-center mb-5">
 
                                                         <div
@@ -391,8 +387,7 @@
                                         <div class="flex-shrink-0">
                                             <div
                                                 class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
-                                                <div
-                                                    class="z-60 relative  flex flex-col items-center content-between">
+                                                <div class="z-60 relative  flex flex-col items-center content-between">
                                                     <div class="flex flex-col items-center mb-5">
                                                         <div
                                                             class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
@@ -431,8 +426,7 @@
                                         <div class="flex-shrink-0">
                                             <div
                                                 class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
-                                                <div
-                                                    class="z-60 relative  flex flex-col items-center content-between">
+                                                <div class="z-60 relative  flex flex-col items-center content-between">
                                                     <div class="flex flex-col items-center mb-5">
                                                         <div
                                                             class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
@@ -476,8 +470,7 @@
                         <div class="absolute inset-y-0 right-0 z-10 flex items-center">
                             <button @click="swiper.slideNext()"
                                 class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                                <svg viewBox="0 0 20 20" fill="currentColor"
-                                    class="chevron-right w-6 h-6 text-primary">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6 text-primary">
                                     <path fill-rule="evenodd"
                                         d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                         clip-rule="evenodd"></path>
@@ -622,15 +615,25 @@
         <div class="">
             <!-- content -->
 
+          
+         
 
+            <span>
+                {{ error }}
+            </span>
 
-            <form class="flex flex-col w-full p-10  text-black" action="">
+            <form class="flex flex-col w-full p-10  text-black" method="POST">
+                {% csrf_token %}
+
+                {{ form }}
+<!-- 
                 <label for="">Ваше имя</label>
-                <input class="border border-black border-opacity-20 py-2 px-6 rounded-full mb-5 focus:outline-none"
+                <input
+                    class="firstname border border-black border-opacity-20 py-2 px-6 rounded-full mb-5 focus:outline-none"
                     type="text">
                 <label for="">Номер телефона</label>
-                <input class="border border-black border-opacity-20 py-2 px-6 rounded-full focus:outline-none"
-                    type="number">
+                <input class="phone border border-black border-opacity-20 py-2 px-6 rounded-full focus:outline-none"
+                    type="number"> -->
                 <button
                     class=" w-full focus:outline-none py-2 px-6 bg-green text-black rounded-full mt-10 uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
                     оставить заявку</button>
