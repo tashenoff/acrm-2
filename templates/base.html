@@ -10,12 +10,12 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script> -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{% static 'css/starts.css' %}" />
 
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
@@ -24,7 +24,7 @@
 
     <title>Document</title>
 
-    
+
     <script>
         var myNav = document.getElementById("nav");
 
@@ -45,12 +45,17 @@
 <body x-data="{ 'isDialogOpen': false, 'darkMode': false }" @keydown.escape="isDialogOpen = false" x-init="
 darkMode = JSON.parse(localStorage.getItem('darkMode'));
 $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
+    <div :class="{'dark': darkMode === true}">
+        <div class="bg-white dark:bg-primary dark:text-white text-black">
+            {% include 'navbar.html' %}
+            {% block content %}
 
-    {% block content %}
 
 
-
-    {% endblock content %}
+            {% endblock content %}
+        </div>
+    </div>
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </html>

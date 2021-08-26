@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.3.1",
+    "clean-css-cli": "^5.3.3",
     "tailwindcss": "^2.2.7"
   }
 }

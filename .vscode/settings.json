@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:acrm-2}/db.sqlite3",
+            "name": "DB3"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
