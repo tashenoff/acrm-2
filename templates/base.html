@@ -12,15 +12,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="{% static 'css/starts.css' %}" />
-
-
+    {% block styles %}
+    {% endblock %}
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
     <script type="text/javascript" src="{% static 'js/main.js' %}" defer></script>
+  
 
     <title>Document</title>
 
@@ -48,8 +47,9 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
     <div :class="{'dark': darkMode === true}">
         <div class="bg-white dark:bg-primary dark:text-white text-black">
             {% include 'navbar.html' %}
+            {% include 'modal.html' %}
             {% block content %}
-
+           
 
 
             {% endblock content %}

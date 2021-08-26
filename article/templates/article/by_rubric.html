@@ -1,20 +1,47 @@
-{% for article in articles %}
-<div class="flex flex-col mb-10">
-    <div class="w-full">
-        <!-- Preview Image -->
-        {% if article.article_image %}
-        <img class="object-cover h-80 mb-10 w-full rounded-lg" src="{{article.article_image.url}}" alt="">
-        {% endif %}
-    </div>
-    <div class="flex flex-col">
-        <h2>Рубрика: {{ current_rubric.name }}</h2>
-        <div class="dark:text-white font-bold">{{ article.title }}</div>
-        <div> {{article.author.username}}</div>
-        <p>{{article.created_date}}</p>
-        {{ article.rubric.name }}
-        <div class="dark:text-white"> {{article.content|safe|truncatewords:50}}</div>
-        <div>Читать далее</div>
-        {{post_detail.get_readtime}}
-    </div>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mx-auto pt-40 ">
+   
+    <h1>hello home page</h1>
+    <div class="flex">
+ 
+    <div class="flex flex-col mb-10">
+    {% for article in articles %}
+    <a href="{% url 'article:article_detail' article.pk %}">
+        <div class="w-full">
+            <!-- Preview Image -->
+            {% if article.article_image %}
+            <img class="object-cover h-80 mb-10 w-full rounded-lg" src="{{article.article_image.url}}" alt="">
+            {% endif %}
+        </div>
+        <div class="flex flex-col">
+            <div class="dark:text-white font-bold">{{ article.title }}</div>
+            <div> {{article.author.username}}</div>
+            <p>{{article.created_date}}</p>
+            {{ article.rubric.name }}
+            <div class="dark:text-white"> {{article.content|safe|truncatewords:50}}</div>
+            <div>Читать далее</div>
+            {{post_detail.get_readtime}}
+        </div>
+    </a>
+    {% endfor %}
 </div>
-{% endfor %}
+
+
+<div class="bg-red-500 ml-5  p-5 w-3/5 relative">
+    <div class="fixed">
+        <a href="{% url 'article:index' %}">Все рубрики</a>
+    {% for rubric in rubrics %}
+    <li>
+        <a href="{% url 'article:by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+    </li>
+    {% endfor %}
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+{% endblock content %}

@@ -1,37 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/starts.css' %}" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+{% endblock %}
 {% block content %}
 
 
 
-    <section id="home" class="text-white dark:bg-primary dark:text-white home relative overflow-hidden ">
+<section id="home" class="text-white dark:bg-primary dark:text-white home relative overflow-hidden ">
 
 
 
-        <div class="relative overflow-hidden flex flex-col items-center justify-center z-40 h-full">
-            <div class="background absolute w-full top-0 left-0 z-50">
-                <div class="star1 star"></div>
-                <div class="star2 star"></div>
-                <div class="star3 star"></div>
-                <div class="star4 star"></div>
-            </div>
+    <div class="relative overflow-hidden flex flex-col items-center justify-center z-40 h-full">
+        <div class="background absolute w-full top-0 left-0 z-50">
+            <div class="star1 star"></div>
+            <div class="star2 star"></div>
+            <div class="star3 star"></div>
+            <div class="star4 star"></div>
+        </div>
 
 
-            <div class="w-100 h-full flex justify-center items-center relative z-60">
+        <div class="w-100 h-full flex justify-center items-center relative z-60">
 
-                <div class="text-center flex flex-col items-center relative z-50">
-                    <h1 class="home__title lg:text-8xl text-3x1 mb-5">Создание сайтов</h1>
-                    <h2 class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio impedit
-                        dicta, </h2>
-                    <button @click="isDialogOpen = true"
-                        class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
-                        Получить адекватную рассценку</button>
-
-                </div>
+            <div class="text-center flex flex-col items-center relative z-50">
+                <h1 class="home__title lg:text-8xl text-3x1 mb-5">Создание сайтов</h1>
+                <h2 class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio impedit
+                    dicta, </h2>
+                <button @click="isDialogOpen = true"
+                    class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
+                    Получить адекватную рассценку</button>
 
             </div>
 
         </div>
 
+    </div>
 
 
 
@@ -42,111 +48,112 @@
 
 
 
-    </section>
+
+</section>
 
 
 
-    <section class="dark:bg-primary py-20 h-full ">
-        <div class="container  mx-auto">
-            <div class="flex flex-col items-center w-full">
-                <h1
-                    class="home__sub-title text-5xl bg-clip-text text-transparent bg-gradient-to-br dark:from-green from-black to-primary dark:to-blueLight p-2">
-                    Ключевые направления</h1>
-                <p class="py-10 w-full text-center dark:text-white text-black">Behind the word mountains, far from
-                    the countries
-                    Vokalia and
-                    Conson
-                    antia, there seedBehind the word mountains, far from the countries ints Vokalia and Conson
-                    antia,
-                    there seed Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias aliquam labore
-                    sapiente impedit saepe maiores dolores sed rerum, expedita rem soluta veniam totam deserunt
-                    vitae
-                    eum blanditiis! Molestiae, doloremque eveniet.</p>
+<section class="dark:bg-primary py-20 h-full ">
+    <div class="container  mx-auto">
+        <div class="flex flex-col items-center w-full">
+            <h1
+                class="home__sub-title text-5xl bg-clip-text text-transparent bg-gradient-to-br dark:from-green from-black to-primary dark:to-blueLight p-2">
+                Ключевые направления</h1>
+            <p class="py-10 w-full text-center dark:text-white text-black">Behind the word mountains, far from
+                the countries
+                Vokalia and
+                Conson
+                antia, there seedBehind the word mountains, far from the countries ints Vokalia and Conson
+                antia,
+                there seed Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias aliquam labore
+                sapiente impedit saepe maiores dolores sed rerum, expedita rem soluta veniam totam deserunt
+                vitae
+                eum blanditiis! Molestiae, doloremque eveniet.</p>
 
-            </div>
-            <div class="relative">
-                <div class="grid grid-cols-3 gap-4">
-                    <!-- <div class="w-60 h-60 bg-primary absolute z-0 -top-10 -left-10 rounded-full"></div>
+        </div>
+        <div class="relative">
+            <div class="grid grid-cols-3 gap-4">
+                <!-- <div class="w-60 h-60 bg-primary absolute z-0 -top-10 -left-10 rounded-full"></div>
                     <div class="w-10 h-10 bg-primary absolute z-0 -top-10 -left-20 rounded-full"></div>
                     <div class="w-60 h-60 bg-primary absolute z-0 -bottom-10 -right-10 rounded-full"></div>
                     <div class="w-10 h-10 bg-primary absolute z-0 -bottom-10 -right-20 rounded-full"></div> -->
+                <div
+                    class="z-50 bg-white flex dark:bg-primary flex-col items-center border border-white mb-5 dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
+
                     <div
-                        class="z-50 bg-white flex dark:bg-primary flex-col items-center border border-white mb-5 dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
-
-                        <div
-                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br  dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
-                            <img src="./assets/img/icons/5.svg" alt="">
-                        </div>
-
-                        <span class="uppercase font-bold">Дизайн</span>
-
-                        <p class="mt-2 text-center dark:text-blueLight">Phosfluorescently target bleeding sources
-                            through viral methodsp
-                            progressively expedite
-                            empowered.</p>
+                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br  dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
+                        <img src="{% static '/img/icons/5.svg' %}" alt="">
                     </div>
+
+                    <span class="uppercase font-bold">Дизайн</span>
+
+                    <p class="mt-2 text-center dark:text-blueLight">Phosfluorescently target bleeding sources
+                        through viral methodsp
+                        progressively expedite
+                        empowered.</p>
+                </div>
+                <div
+                    class="dark:bg-primary flex flex-col items-center border mt-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
                     <div
-                        class="dark:bg-primary flex flex-col items-center border mt-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
-                        <div
-                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
-                            <img src="./assets/img/icons/7.svg" alt="">
-                        </div>
-                        <span class="uppercase font-bold">Маркетинг</span>
-
-                        <p class="mt-2 text-center dark:text-blueLight">Phosfluorescently target bleeding sources
-                            through viral methodsp
-                            progressively expedite
-                            empowered.</p>
+                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
+                        <img src="{% static '/img/icons/7.svg' %}" alt="">
                     </div>
+                    <span class="uppercase font-bold">Маркетинг</span>
+
+                    <p class="mt-2 text-center dark:text-blueLight">Phosfluorescently target bleeding sources
+                        through viral methodsp
+                        progressively expedite
+                        empowered.</p>
+                </div>
+                <div
+                    class="dark:bg-primary z-50 bg-white flex flex-col items-center border mb-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
                     <div
-                        class="dark:bg-primary z-50 bg-white flex flex-col items-center border mb-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
-                        <div
-                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
-                            <img src="./assets/img/icons/6.svg" alt="">
-                        </div>
-                        <span class="uppercase font-bold">Разработка</span>
-
-                        <p class="mt-2 text-center dark:text-blueLight">Phosfluorescently target bleeding sources
-                            through viral methodsp
-                            progressively expedite
-                            empowered.</p>
+                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
+                        <img src="{% static '/img/icons/6.svg' %}" alt="">
                     </div>
+                    <span class="uppercase font-bold">Разработка</span>
+
+                    <p class="mt-2 text-center dark:text-blueLight">Phosfluorescently target bleeding sources
+                        through viral methodsp
+                        progressively expedite
+                        empowered.</p>
                 </div>
             </div>
-
-
-
         </div>
 
-    </section>
 
 
-    <section class="bg-gray text-black dark:bg-primary dark:text-white">
-        <div class="py-20">
-            <div class="flex flex-col items-center text-center relative">
-                <div
-                    class="w-20 h-20 p-1 bg-white dark:bg-blueLight rounded-full shadow-xl flex items-center justify-center">
-                    <span class="text-4xl">💪</span>
-                </div>
-                <div class="mt-5">
-                    <span class="uppercase">Наши услуги</span>
-                    <h1 class="lg:text-4xl mt-5 text-3x1 home__sub-title">Что мы предлагаем</h1>
-                </div>
-                <p class="w-full py-10">Фронт end: команда Yona избавить вас от необходимости волноваться о
-                    внешней
-                    составляющей<br>
-                    проекта. Широкий спектр услуг обеспечит заказчику и разработчику гибкость в исполнении
-                    проекта.
-                </p>
+    </div>
+
+</section>
+
+
+<section class="bg-gray text-black dark:bg-primary dark:text-white">
+    <div class="py-20">
+        <div class="flex flex-col items-center text-center relative">
+            <div
+                class="w-20 h-20 p-1 bg-white dark:bg-blueLight rounded-full shadow-xl flex items-center justify-center">
+                <span class="text-4xl">💪</span>
             </div>
+            <div class="mt-5">
+                <span class="uppercase">Наши услуги</span>
+                <h1 class="lg:text-4xl mt-5 text-3x1 home__sub-title">Что мы предлагаем</h1>
+            </div>
+            <p class="w-full py-10">Фронт end: команда Yona избавить вас от необходимости волноваться о
+                внешней
+                составляющей<br>
+                проекта. Широкий спектр услуг обеспечит заказчику и разработчику гибкость в исполнении
+                проекта.
+            </p>
+        </div>
 
 
-            <section id='product'>
+        <section id='product'>
 
 
-                <div class="swiper-container">
+            <div class="swiper-container">
 
-                    <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
+                <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
                                     loop: true,
                                     slidesPerView: 1,
                                     spaceBetween: 0,
@@ -167,253 +174,253 @@
                                       },
                                     },
                                   })" class="relative w-full mx-auto flex flex-row">
-                        <div class="absolute inset-y-0 left-0 z-10 flex items-center">
-                            <button @click="swiper.slidePrev()"
-                                class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6 text-primary">
-                                    <path fill-rule="evenodd"
-                                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
+                    <div class="absolute inset-y-0 left-0 z-10 flex items-center">
+                        <button @click="swiper.slidePrev()"
+                            class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6 text-primary">
+                                <path fill-rule="evenodd"
+                                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
 
-                        <div class="swiper-container text-white" data-swiper-autoplay="2000" x-ref="container">
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border dark:border-white dark:border-opacity-20 ">
-                                        <div class="flex-shrink-0">
-                                            <div
-                                                class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
-                                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                                    <div class="flex flex-col items-center mb-5">
+                    <div class="swiper-container text-white" data-swiper-autoplay="2000" x-ref="container">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide p-4">
+                                <div
+                                    class="flex flex-col rounded-lg shadow-lg overflow-hidden border dark:border-white dark:border-opacity-20 ">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
+                                            <div class="z-60 relative  flex flex-col items-center content-between">
+                                                <div class="flex flex-col items-center mb-5">
 
-                                                        <div
-                                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                                            <img src="./assets/img/icons/8.svg" alt="">
-                                                        </div>
-
-                                                        <h1 class="text-lg card__title dark:text-green">Landing Page
-                                                        </h1>
+                                                    <div
+                                                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
+                                                        <img src="./assets/img/icons/8.svg" alt="">
                                                     </div>
-                                                    <p
-                                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5">
-                                                        Позволяет Вашим клиентам
-                                                        оплачивать
-                                                        товары/услуги
-                                                        в любое время и с любой точки мира на Ваш
-                                                        корпоративный счет, благодаря
-                                                        чему
-                                                        продажи компании в онлайн становятся бесперебойными.
-                                                    </p>
 
-                                                    <div class="flex flex-col w-full items-center mt-5">
-                                                        <button @click="isDialogOpen = true"
-                                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                                            Оставить заявку
-                                                        </button>
-                                                    </div>
+                                                    <h1 class="text-lg card__title dark:text-green">Landing Page
+                                                    </h1>
+                                                </div>
+                                                <p
+                                                    class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5">
+                                                    Позволяет Вашим клиентам
+                                                    оплачивать
+                                                    товары/услуги
+                                                    в любое время и с любой точки мира на Ваш
+                                                    корпоративный счет, благодаря
+                                                    чему
+                                                    продажи компании в онлайн становятся бесперебойными.
+                                                </p>
+
+                                                <div class="flex flex-col w-full items-center mt-5">
+                                                    <button @click="isDialogOpen = true"
+                                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                                        Оставить заявку
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border dark:border-white dark:border-opacity-20 ">
-                                        <div class="flex-shrink-0">
-                                            <div
-                                                class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
-                                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                                    <div class="flex flex-col items-center mb-5">
-                                                        <div
-                                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                                            <img src="./assets/img/icons/8.svg" alt="">
-                                                        </div>
-
-                                                        <h1 class="text-lg card__title dark:text-green">Landing Page
-                                                        </h1>
-                                                    </div>
-                                                    <p
-                                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5">
-                                                        Позволяет Вашим клиентам
-                                                        оплачивать
-                                                        товары/услуги
-                                                        в любое время и с любой точки мира на Ваш
-                                                        корпоративный счет, благодаря
-                                                        чему
-                                                        продажи компании в онлайн становятся бесперебойными.
-                                                    </p>
-
-                                                    <div class="flex flex-col w-full items-center mt-5">
-                                                        <button @click="isDialogOpen = true"
-                                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                                            Оставить заявку
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide p-4">
-                                    <div
-                                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border dark:border-white dark:border-opacity-20 ">
-                                        <div class="flex-shrink-0">
-                                            <div
-                                                class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
-                                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                                    <div class="flex flex-col items-center mb-5">
-                                                        <div
-                                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                                            <img src="./assets/img/icons/8.svg" alt="">
-                                                        </div>
-
-                                                        <h1 class="text-lg card__title dark:text-green">Landing Page
-                                                        </h1>
-                                                    </div>
-                                                    <p
-                                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5">
-                                                        Позволяет Вашим клиентам
-                                                        оплачивать
-                                                        товары/услуги
-                                                        в любое время и с любой точки мира на Ваш
-                                                        корпоративный счет, благодаря
-                                                        чему
-                                                        продажи компании в онлайн становятся бесперебойными.
-                                                    </p>
-
-                                                    <div class="flex flex-col w-full items-center mt-5">
-                                                        <button @click="isDialogOpen = true"
-                                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                                            Оставить заявку
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-
                             </div>
 
+                            <div class="swiper-slide p-4">
+                                <div
+                                    class="flex flex-col rounded-lg shadow-lg overflow-hidden border dark:border-white dark:border-opacity-20 ">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
+                                            <div class="z-60 relative  flex flex-col items-center content-between">
+                                                <div class="flex flex-col items-center mb-5">
+                                                    <div
+                                                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
+                                                        <img src="./assets/img/icons/8.svg" alt="">
+                                                    </div>
+
+                                                    <h1 class="text-lg card__title dark:text-green">Landing Page
+                                                    </h1>
+                                                </div>
+                                                <p
+                                                    class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5">
+                                                    Позволяет Вашим клиентам
+                                                    оплачивать
+                                                    товары/услуги
+                                                    в любое время и с любой точки мира на Ваш
+                                                    корпоративный счет, благодаря
+                                                    чему
+                                                    продажи компании в онлайн становятся бесперебойными.
+                                                </p>
+
+                                                <div class="flex flex-col w-full items-center mt-5">
+                                                    <button @click="isDialogOpen = true"
+                                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                                        Оставить заявку
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide p-4">
+                                <div
+                                    class="flex flex-col rounded-lg shadow-lg overflow-hidden border dark:border-white dark:border-opacity-20 ">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="h-50 w-full text-black dark:bg-primary bg-white  flex flex-col items-center justify-center p-5">
+                                            <div class="z-60 relative  flex flex-col items-center content-between">
+                                                <div class="flex flex-col items-center mb-5">
+                                                    <div
+                                                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
+                                                        <img src="./assets/img/icons/8.svg" alt="">
+                                                    </div>
+
+                                                    <h1 class="text-lg card__title dark:text-green">Landing Page
+                                                    </h1>
+                                                </div>
+                                                <p
+                                                    class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5">
+                                                    Позволяет Вашим клиентам
+                                                    оплачивать
+                                                    товары/услуги
+                                                    в любое время и с любой точки мира на Ваш
+                                                    корпоративный счет, благодаря
+                                                    чему
+                                                    продажи компании в онлайн становятся бесперебойными.
+                                                </p>
+
+                                                <div class="flex flex-col w-full items-center mt-5">
+                                                    <button @click="isDialogOpen = true"
+                                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                                        Оставить заявку
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
                         </div>
 
-                        <div class="absolute inset-y-0 right-0 z-10 flex items-center">
-                            <button @click="swiper.slideNext()"
-                                class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6 text-primary">
-                                    <path fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
                     </div>
 
-
-
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-    </section>
-
-    <section class="bg-off dark:bg-primary">
-        <div class="container mx-auto pt-20">
-            <div class="flex flex-col items-center text-center pt-10">
-                <h1 class="lg:text-4xl text-3x1 home__sub-title text-black dark:text-white">Наши работы</h1>
-            </div>
-            <div class="w-full h-full bg-blueLight mt-20 rounded-lg p-5">
-                <div class="flex w-full items-center justify-center">
-                    <div class="flex w-full items-center justify-center flex-col">
-                        <h1 class="text-lg text-black work__title font-bold pb-5 uppercase ">Платформа обратных
-                            торгов для всей
-                            электроники</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorum hic nobis debitis
-                            in, minus voluptate, excepturi dolores ratione dignissimos pariatur rem fuga eius saepe
-                            atque laborum consequatur provident. Modi?</p>
-
-                    </div>
-                    <div class=" flex w-full items-center justify-center">
-                        <img src="https://d1i2cp4a5c819e.cloudfront.net/wp-content/uploads/2019/10/cs_l_minimisecost-min.png"
-                            alt="">
+                    <div class="absolute inset-y-0 right-0 z-10 flex items-center">
+                        <button @click="swiper.slideNext()"
+                            class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6 text-primary">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-            </div>
 
 
 
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<section class="bg-off dark:bg-primary">
+    <div class="container mx-auto pt-20">
+        <div class="flex flex-col items-center text-center pt-10">
+            <h1 class="lg:text-4xl text-3x1 home__sub-title text-black dark:text-white">Наши работы</h1>
         </div>
-    </section>
+        <div class="w-full h-full bg-blueLight mt-20 rounded-lg p-5">
+            <div class="flex w-full items-center justify-center">
+                <div class="flex w-full items-center justify-center flex-col">
+                    <h1 class="text-lg text-black work__title font-bold pb-5 uppercase ">Платформа обратных
+                        торгов для всей
+                        электроники</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorum hic nobis debitis
+                        in, minus voluptate, excepturi dolores ratione dignissimos pariatur rem fuga eius saepe
+                        atque laborum consequatur provident. Modi?</p>
 
-    <section class="py-20 text-white dark:bg-primary bg-primary text-white p-10">
-        <div class="container mx-auto">
-            <div class="text-center w-full pb-10">
-                <h1 class="lg:text-4xl text-3x1 home__sub-title">Почему выбирают нас</h1>
+                </div>
+                <div class=" flex w-full items-center justify-center">
+                    <img src="https://d1i2cp4a5c819e.cloudfront.net/wp-content/uploads/2019/10/cs_l_minimisecost-min.png"
+                        alt="">
+                </div>
             </div>
-            <div class="grid grid-cols-3 gap-4 my-10">
+        </div>
 
 
-                <div class="div bg-white p-10 text-black rounded-lg flex items-center">
-                    <span class="text-2xl mr-5">✍️</span>
-                    <span class="font-bold uppercase"> Рисуем сайты "с нуля"</span>
-                </div>
-                <div class="div bg-white p-10 text-black rounded-lg flex items-center">
-                    <span class="text-2xl mr-5">😎</span>
-                    <span class="font-bold uppercase"> Наши сайты быстрее</span>
-                </div>
-                <div class="div bg-white p-10 text-black rounded-lg flex items-center">
-                    <span class="text-2xl mr-5">🤑</span>
-                    <span class="font-bold uppercase">Адекватные цены</span>
-                </div>
-                <div class="div bg-white p-10 text-black rounded-lg flex items-center">
-                    <span class="text-2xl mr-5">😍</span>
-                    <span class="font-bold uppercase"> шустрый менеджер</span>
-                </div>
-                <div class="div bg-white p-10 text-black rounded-lg flex items-center">
-                    <span class="text-2xl mr-5">☕</span>
-                    <span class="font-bold uppercase"> Вкусный кофе</span>
-                </div>
-                <div class="div bg-white p-10 text-black rounded-lg flex items-center">
-                    <img class="w-10 h-10 mr-5" src="./assets/img/icons/17.svg" alt="">
-                    <span class="font-bold uppercase"> Программист экстраверт</span>
-                </div>
-                <!-- <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+
+    </div>
+</section>
+
+<section class="py-20 text-white dark:bg-primary bg-primary text-white p-10">
+    <div class="container mx-auto">
+        <div class="text-center w-full pb-10">
+            <h1 class="lg:text-4xl text-3x1 home__sub-title">Почему выбирают нас</h1>
+        </div>
+        <div class="grid grid-cols-3 gap-4 my-10">
+
+
+            <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+                <span class="text-2xl mr-5">✍️</span>
+                <span class="font-bold uppercase"> Рисуем сайты "с нуля"</span>
+            </div>
+            <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+                <span class="text-2xl mr-5">😎</span>
+                <span class="font-bold uppercase"> Наши сайты быстрее</span>
+            </div>
+            <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+                <span class="text-2xl mr-5">🤑</span>
+                <span class="font-bold uppercase">Адекватные цены</span>
+            </div>
+            <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+                <span class="text-2xl mr-5">😍</span>
+                <span class="font-bold uppercase"> шустрый менеджер</span>
+            </div>
+            <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+                <span class="text-2xl mr-5">☕</span>
+                <span class="font-bold uppercase"> Вкусный кофе</span>
+            </div>
+            <div class="div bg-white p-10 text-black rounded-lg flex items-center">
+                <img class="w-10 h-10 mr-5" src="{% static '/img/icons/17.svg' %}" alt="">
+                <span class="font-bold uppercase"> Программист экстраверт</span>
+            </div>
+            <!-- <div class="div bg-white p-10 text-black rounded-lg flex items-center">
                     <img class="w-10 h-10 mr-5" src="./assets/img/icons/17.svg" alt="">
                     <span class="font-bold uppercase"> Текст пишем сами</span>
                 </div> -->
 
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- <section>
+<!-- <section>
         <div class="container mx-auto bg-primary p-10 rounded-lg">
             <h1 class="text-5x1">This website is built with Dorik, without writing any code</h1>
         </div>
     </section> -->
 
 
-    <!-- <section class="my-20 text-black">
+<!-- <section class="my-20 text-black">
         <div class="container mx-auto">
             <div class="text-center w-full pb-10">
                 <h1 class="lg:text-4xl home__sub-title">Этап работы</h1>
@@ -422,68 +429,28 @@
     </section> -->
 
 
-    <section class="py-20 text-black bg-red">
-        <div class="container mx-auto">
-            <div class="flex flex-col items-center w-full pb-10">
+<section class="py-20 text-black bg-red">
+    <div class="container mx-auto">
+        <div class="flex flex-col items-center w-full pb-10">
 
-                <h1 class="lg:text-4xl text-3x1 home__sub-title">Остались вопросы?</h1>
-                <p class="py-10 w-1/2 text-center sub-title ">Оставьте свои контактные данные и мы гарантируем вам,
-                    что
-                    вы получите самую лучшую консультацию!</p>
+            <h1 class="lg:text-4xl text-3x1 home__sub-title">Остались вопросы?</h1>
+            <p class="py-10 w-1/2 text-center sub-title ">Оставьте свои контактные данные и мы гарантируем вам,
+                что
+                вы получите самую лучшую консультацию!</p>
 
-                <button @click="isDialogOpen = true"
-                    class="focus:outline-none py-4 px-6 bg-green lg:w-1/1 text-black w-1/1 rounded-full uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
-                    Получить адекватную рассценку</button>
-            </div>
-
-
-
+            <button @click="isDialogOpen = true"
+                class="focus:outline-none py-4 px-6 bg-green lg:w-1/1 text-black w-1/1 rounded-full uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
+                Получить адекватную рассценку</button>
         </div>
-    </section>
+
+
+
+    </div>
+</section>
 
 
 </div>
 <!-- overlay -->
-<div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="isDialogOpen"
-    :class="{ 'fixed inset-0 z-60  flex items-start justify-center': isDialogOpen }">
-    <!-- dialog -->
-    <div class="bg-white shadow-2xl m-4 sm:m-8 text-black" x-show="isDialogOpen" @click.away="isDialogOpen = false">
-        <div class="flex justify-between items-center border-b p-2 text-xl">
-            <h6 class="text-xl font-bold">Свяжитесь с нами</h6>
-            <button type="button" @click="isDialogOpen = false">✖</button>
-        </div>
-        <div class="">
-            <!-- content -->
-
-          
-         
-
-            <span>
-                {{ error }}
-            </span>
-
-            <form class="flex flex-col w-full p-10  text-black" method="POST">
-                {% csrf_token %}
-
-                {{ form }}
-<!-- 
-                <label for="">Ваше имя</label>
-                <input
-                    class="firstname border border-black border-opacity-20 py-2 px-6 rounded-full mb-5 focus:outline-none"
-                    type="text">
-                <label for="">Номер телефона</label>
-                <input class="phone border border-black border-opacity-20 py-2 px-6 rounded-full focus:outline-none"
-                    type="number"> -->
-                <button
-                    class=" w-full focus:outline-none py-2 px-6 bg-green text-black rounded-full mt-10 uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
-                    оставить заявку</button>
-            </form>
-
-
-
-
-    </div><!-- /dialog -->
-</div><!-- /overlay -->
 
 
 

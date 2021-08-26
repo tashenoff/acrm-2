@@ -1,0 +1,37 @@
+<div x-cloak class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="isDialogOpen"
+    :class="{ 'fixed inset-0 z-60  flex items-start justify-center': isDialogOpen }">
+    <!-- dialog -->
+    <div class="bg-white shadow-2xl m-4 sm:m-8 text-black" x-show="isDialogOpen" @click.away="isDialogOpen = false">
+        <div class="flex justify-between items-center border-b p-2 text-xl">
+            <h6 class="text-xl font-bold">Свяжитес11ь с нами</h6>
+            <button type="button" @click="isDialogOpen = false">✖</button>
+        </div>
+        <div class="">
+            <!-- content -->
+            <span>
+                {{ error }}
+            </span>
+
+            <form class="flex flex-col w-full p-10  text-black" method="POST">
+                {% csrf_token %}
+
+                {{ form }}
+                <!-- 
+                <label for="">Ваше имя</label>
+                <input
+                    class="firstname border border-black border-opacity-20 py-2 px-6 rounded-full mb-5 focus:outline-none"
+                    type="text">
+                <label for="">Номер телефона</label>
+                <input class="phone border border-black border-opacity-20 py-2 px-6 rounded-full focus:outline-none"
+                    type="number"> -->
+                <button
+                    class=" w-full focus:outline-none py-2 px-6 bg-green text-black rounded-full mt-10 uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
+                    оставить заявку</button>
+            </form>
+
+
+
+
+        </div><!-- /dialog -->
+    </div><!-- /overlay -->
+</div>
