@@ -1,49 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
-<section class="bg-white h-50">
-    Блог компании
+<section class="bg-primary h-48">
+    <div class="flex items-center justify-center h-full text-white ">
+        Блог компании
+    </div>
 </section>
-<div class="container mx-auto pt-40 ">
-   
-    <h1>hello home page</h1>
+
+
+
+<div class=" h-full">
+    <div class="container mx-auto pt-20">
     <div class="flex">
- 
-    <div class="flex flex-col mb-10">
-    {% for article in articles %}
-    <a href="{% url 'article:article_detail' article.pk %}">
-        <div class="w-full">
-            <!-- Preview Image -->
+      <div class="flex-col">
+        {% for article in articles %}
+      <div class="w-full mx-5 mb-20  bg-white dark:bg-primary ">
+       
+        <div class="relative">
             {% if article.article_image %}
-            <img class="object-cover h-80 mb-10 w-full rounded-lg" src="{{article.article_image.url}}" alt="">
-            {% endif %}
+        <img class="h-96 w-full object-cover" src='{{article.article_image.url}}' alt="">
+        {% endif %}
+          <div class="absolute bottom-5 left-5 z-50 text-white bg-secondary p-2">{{ article.rubric.name }}</div>
         </div>
-        <div class="flex flex-col">
-            <div class="dark:text-white font-bold">{{ article.title }}</div>
-            <div> {{article.author.username}}</div>
-            <p>{{article.created_date}}</p>
-            {{ article.rubric.name }}
-            <div class="dark:text-white"> {{article.content|safe|truncatewords:50}}</div>
-            <div>Читать далее</div>
-            {{post_detail.get_readtime}}
+        <div class="px-5">
+          <div class="flex pt-5">
+          <span>Автор:  {{article.author.username}}</span><span class="mx-5">|</span>
+          <span>{{article.created_date}}</span>
+            </div>
+            <a class="pt-10" href="{% url 'article:article_detail' article.pk %}">
+          <h1 class="font-bold pb-5 pt-3 text-2xl">{{ article.title }}
+        </a>
+  </h1>
+          {{article.content|safe|truncatewords:40}}
+         
         </div>
-    </a>
-    {% endfor %}
-</div>
+       
+      
+      </div>
+      {% endfor %}
+    </div>
+      <div class="w-7/12 ml-10 p-5 bg-white dark:bg-primary">
+        <div class="border-b border-gray-300 py-5">Рубрики</div>
+         {% for rubric in rubrics %}
+         <div class="border-b border-gray-300 py-5"><a href="{% url 'article:by_rubric' rubric.pk %}">{{ rubric.name }}</a></div>
+         {% endfor %}
+      </div>
+    </div>
+  </div>
+   </div>
+
+    {% endblock content %}
 
 
-<div class="bg-red-500 ml-5  p-5 w-3/5 relative">
-    <div class="fixed">
-    {% for rubric in rubrics %}
-    <li>
-        <a href="{% url 'article:by_rubric' rubric.pk %}">{{ rubric.name }}</a>
-    </li>
-    {% endfor %}
-</div>
-</div>
 
-
-</div>
-
-</div>
-
-{% endblock content %}
